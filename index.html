@@ -3,44 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muthu | Senior Vendor Relationship Specialist (VSR) & Infrastructure Procurement</title>
-  <meta name="description" content="Executive portfolio of Muthu, Senior Vendor Relationship Specialist (VSR) orchestrating strategic construction materials, heavy structural steel, and infrastructure logistics between IT giants, MNCs, and tier-1 manufacturers.">
-  
-  <!-- Google Fonts: Syne & Outfit & JetBrains Mono -->
+  <title>Muthu | Vendor Relationship Specialist (VSR) – Infrastructure Procurement</title>
+  <meta name="description" content="Muthu – Vendor Relationship Specialist (VSR) connecting IT companies and MNCs with trusted construction material manufacturers: steel, bricks, cement and more.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Three.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-  <!-- Canvas Confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            brand: {
-              bronze: '#d49b4d',
-              bronzeLight: '#f3c784',
-              bronzeDark: '#996826',
-              slate: '#0f141c',
-              slateCard: '#151c27',
-              slateBorder: '#232e40',
-              accentCyan: '#38bdf8'
-            }
+            sandal: { 50: '#fbf7f0', 100: '#f5ecdc', 200: '#ecdcc0', 300: '#dfc79d', 400: '#cfae78', 500: '#b8935a' },
+            crimson: { DEFAULT: '#a61e2b', dark: '#7f1520', light: '#c93442' },
+            silver: { 100: '#f1f2f4', 200: '#dfe2e6', 300: '#c4c9d0', 400: '#a3a9b3', 500: '#7d848f' },
+            ink: '#2a2420'
           },
           fontFamily: {
-            display: ['Syne', 'sans-serif'],
-            body: ['Outfit', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace']
+            display: ['"Playfair Display"', 'serif'],
+            body: ['Inter', 'sans-serif']
           }
         }
       }
@@ -48,1437 +33,427 @@
   </script>
 
   <style>
+    html { scroll-behavior: smooth; }
     body {
-      background-color: #0b0f15;
-      color: #e2e8f0;
-      font-family: 'Outfit', sans-serif;
-      overflow-x: hidden;
+      background: #fbf7f0;
+      color: #2a2420;
+      font-family: 'Inter', sans-serif;
     }
+    ::selection { background: #a61e2b; color: #fff; }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
+    .silver-line {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #c4c9d0, #f1f2f4, #c4c9d0, transparent);
     }
-    ::-webkit-scrollbar-track {
-      background: #0b0f15;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #232e40;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #d49b4d;
-    }
+    .silver-border { border: 1px solid transparent;
+      background: linear-gradient(#fff, #fff) padding-box,
+                  linear-gradient(135deg, #e6e8ec, #a3a9b3 50%, #f1f2f4) border-box; }
 
-    .glass-panel {
-      background: rgba(21, 28, 39, 0.7);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(212, 155, 77, 0.15);
+    .btn-red {
+      background: linear-gradient(135deg, #c93442, #a61e2b 60%, #7f1520);
+      color: #fff;
+      box-shadow: 0 8px 22px -8px rgba(166, 30, 43, .55);
+      transition: all .3s ease;
     }
+    .btn-red:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -8px rgba(166, 30, 43, .65); }
 
-    .glass-panel-glow {
-      background: rgba(21, 28, 39, 0.8);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(212, 155, 77, 0.3);
-      box-shadow: 0 0 35px -10px rgba(212, 155, 77, 0.18);
+    .btn-silver {
+      background: linear-gradient(135deg, #ffffff, #e6e8ec 55%, #cfd3d9);
+      border: 1px solid #c4c9d0;
+      color: #2a2420;
+      transition: all .3s ease;
     }
+    .btn-silver:hover { border-color: #a61e2b; color: #a61e2b; }
 
-    .gradient-text-bronze {
-      background: linear-gradient(135deg, #ffffff 10%, #f3c784 55%, #d49b4d 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .card {
+      background: #fff;
+      border: 1px solid #ecdcc0;
+      border-radius: 1.25rem;
+      box-shadow: 0 10px 30px -18px rgba(90, 60, 20, .35);
+      transition: all .3s ease;
     }
+    .card:hover { transform: translateY(-4px); border-color: #c4c9d0; box-shadow: 0 18px 40px -18px rgba(90, 60, 20, .45); }
 
-    .gradient-bronze-btn {
-      background: linear-gradient(135deg, #e4a958 0%, #b87b28 100%);
-      box-shadow: 0 4px 20px rgba(212, 155, 77, 0.25);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    .sandal-bg { background: linear-gradient(180deg, #f5ecdc 0%, #fbf7f0 100%); }
+    .silver-text {
+      background: linear-gradient(135deg, #7d848f, #c4c9d0 50%, #7d848f);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .gradient-bronze-btn:hover {
-      box-shadow: 0 6px 30px rgba(212, 155, 77, 0.45);
-      transform: translateY(-2px);
+    .pattern {
+      background-image: radial-gradient(rgba(184,147,90,.18) 1px, transparent 1px);
+      background-size: 22px 22px;
     }
+    .tab-active { background: #a61e2b; color: #fff; border-color: #a61e2b; }
 
-    .blueprint-grid {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    }
+    input, select, textarea { background: #fff; border: 1px solid #dfc79d; border-radius: .75rem; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: #a61e2b; box-shadow: 0 0 0 3px rgba(166,30,43,.12); }
+    input[type=range] { accent-color: #a61e2b; }
 
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.08); }
-    }
-    .glow-blob {
-      animation: pulseGlow 8s ease-in-out infinite;
-    }
+    .fade-in { opacity: 0; transform: translateY(18px); transition: all .8s ease; }
+    .fade-in.show { opacity: 1; transform: none; }
   </style>
 </head>
-<body class="blueprint-grid selection:bg-brand-bronze selection:text-black min-h-screen relative">
+<body>
 
-  <!-- Ambient Light Orbs -->
-  <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-amber-600/10 blur-[130px] pointer-events-none glow-blob"></div>
-  <div class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-brand-bronze/10 blur-[150px] pointer-events-none glow-blob" style="animation-delay: -3s;"></div>
-  <div class="fixed top-[40%] right-[20%] w-[400px] h-[400px] rounded-full bg-sky-600/5 blur-[120px] pointer-events-none glow-blob" style="animation-delay: -5s;"></div>
-
-  <!-- NAVIGATION -->
-  <header class="sticky top-0 z-50 px-6 py-4 transition-all duration-300">
-    <div class="max-w-7xl mx-auto">
-      <nav class="glass-panel rounded-2xl px-6 py-3.5 flex items-center justify-between shadow-2xl">
-        <a href="#hero" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-bronze to-brand-bronzeDark flex items-center justify-center font-display font-bold text-slate-950 text-xl shadow-lg shadow-brand-bronze/20 group-hover:scale-105 transition-transform">
-            M
-          </div>
-          <div>
-            <div class="font-display font-bold tracking-wider text-white text-lg flex items-center gap-2">
-              MUTHU <span class="text-xs px-2 py-0.5 rounded bg-brand-bronze/20 text-brand-bronzeLight border border-brand-bronze/40 font-mono font-medium">VSR</span>
-            </div>
-            <div class="text-[11px] font-mono text-slate-400 tracking-tight">VENDOR RELATIONSHIP SPECIALIST</div>
-          </div>
-        </a>
-
-        <!-- Desktop Links -->
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="#about" class="hover:text-brand-bronzeLight transition-colors">Strategic Role</a>
-          <a href="#3d-showcase" class="hover:text-brand-bronzeLight transition-colors flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            3D Material Lab
-          </a>
-          <a href="#ecosystem" class="hover:text-brand-bronzeLight transition-colors">Ecosystem Bridge</a>
-          <a href="#portfolio" class="hover:text-brand-bronzeLight transition-colors">Key Engagements</a>
-          <a href="#roi-calculator" class="hover:text-brand-bronzeLight transition-colors">Procurement ROI</a>
-          <a href="#contact" class="hover:text-brand-bronzeLight transition-colors">Direct Desk</a>
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-sandal-200">
+    <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-full silver-border flex items-center justify-center font-display font-bold text-xl text-crimson">M</div>
+        <div class="leading-tight">
+          <div class="font-display font-bold text-lg tracking-wide">MUTHU</div>
+          <div class="text-[10px] tracking-[.22em] text-silver-500 uppercase">Vendor Relationship Specialist</div>
         </div>
-
-        <div class="flex items-center gap-3">
-          <a href="#contact" class="gradient-bronze-btn text-slate-950 font-semibold px-4 py-2 rounded-xl text-sm flex items-center gap-2">
-            <span>Connect</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-          </a>
-        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/80">
+        <a href="#about" class="hover:text-crimson transition">About</a>
+        <a href="#expertise" class="hover:text-crimson transition">Expertise</a>
+        <a href="#materials" class="hover:text-crimson transition">Materials</a>
+        <a href="#work" class="hover:text-crimson transition">Work</a>
+        <a href="#estimator" class="hover:text-crimson transition">Estimator</a>
       </nav>
+      <a href="#contact" class="btn-red px-5 py-2.5 rounded-full text-sm font-semibold">Get in Touch</a>
     </div>
   </header>
 
-  <!-- HERO SECTION WITH INTERACTIVE 3D CANVAS -->
-  <section id="hero" class="relative min-h-[90vh] flex items-center pt-8 pb-16 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      
-      <!-- Left Column: Copy & Executive Credentials -->
-      <div class="lg:col-span-7 z-10 space-y-6">
-        
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-bronze/40 bg-brand-bronze/10 text-brand-bronzeLight text-xs font-mono tracking-wide">
-          <i data-lucide="shield-check" class="w-4 h-4 text-brand-bronze"></i>
-          <span>ENTERPRISE VENDOR RELATIONSHIP SPECIALIST (VSR)</span>
+  <!-- HERO -->
+  <section id="home" class="sandal-bg pattern relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-12 gap-14 items-center">
+      <div class="lg:col-span-7 space-y-7 fade-in">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white silver-border text-xs font-semibold tracking-[.18em] text-crimson uppercase">
+          <span class="w-2 h-2 rounded-full bg-crimson"></span> VSR · Strategic Sourcing Partner
         </div>
-
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-[1.1]">
-          Orchestrating <span class="gradient-text-bronze">Tier-1 Infrastructure</span> Between IT Giants & Mega-Suppliers
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1]">
+          Trusted Supply Partnerships for <span class="text-crimson">India's Leading</span> IT &amp; MNC Builds
         </h1>
-
-        <p class="text-slate-300 text-lg leading-relaxed max-w-2xl font-light">
-          Bridging Fortune 500 tech campuses, mission-critical data centers, and multi-acre IT SEZs with high-volume structural steel, engineered precast, and industrial building supplies. Delivering verified compliance, price hedges, and unbroken supply lines without middleman overhead.
+        <p class="text-lg text-ink/70 leading-relaxed max-w-2xl">
+          I connect technology companies and multinational corporations with dependable manufacturers of steel, bricks, cement and finishing materials — ensuring verified quality, fair pricing and on-time delivery for every project.
         </p>
-
-        <!-- Metrics Strip -->
-        <div class="grid grid-cols-3 gap-4 py-3 max-w-xl">
-          <div class="glass-panel p-4 rounded-xl border border-slate-700/60">
-            <div class="font-display text-2xl lg:text-3xl font-extrabold text-white">450K+</div>
-            <div class="text-xs font-mono text-slate-400 mt-0.5">Tons Structural Steel</div>
-          </div>
-          <div class="glass-panel p-4 rounded-xl border border-slate-700/60">
-            <div class="font-display text-2xl lg:text-3xl font-extrabold text-brand-bronzeLight">100%</div>
-            <div class="text-xs font-mono text-slate-400 mt-0.5">BIS & ASTM Compliance</div>
-          </div>
-          <div class="glass-panel p-4 rounded-xl border border-slate-700/60">
-            <div class="font-display text-2xl lg:text-3xl font-extrabold text-white">18M+</div>
-            <div class="text-xs font-mono text-slate-400 mt-0.5">Sq. Ft IT Parks Sourced</div>
-          </div>
-        </div>
-
-        <!-- Hero Actions -->
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="#3d-showcase" class="gradient-bronze-btn text-slate-950 font-bold px-6 py-3.5 rounded-xl flex items-center gap-3 group">
-            <i data-lucide="box" class="w-5 h-5"></i>
-            <span>Inspect 3D Structural Hub</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        <div class="flex flex-wrap gap-4 pt-1">
+          <a href="#contact" class="btn-red px-7 py-3.5 rounded-full font-semibold flex items-center gap-2">
+            Start a Conversation <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="#portfolio" class="px-6 py-3.5 rounded-xl glass-panel text-white font-semibold hover:border-brand-bronze/50 transition-all flex items-center gap-2">
-            <i data-lucide="layers" class="w-4 h-4 text-brand-bronze"></i>
-            <span>View MNC Case Profiles</span>
+          <a href="#work" class="btn-silver px-7 py-3.5 rounded-full font-semibold flex items-center gap-2">
+            <i data-lucide="briefcase" class="w-4 h-4"></i> View Work
           </a>
         </div>
-
-        <div class="flex items-center gap-6 pt-3 text-xs text-slate-400 font-mono">
-          <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Direct Mill Sourcing</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Zero Markup Transparency</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Strategic Hedging</span>
-        </div>
-
-      </div>
-
-      <!-- Right Column: 3D High-Rise Architectural Structure Canvas -->
-      <div class="lg:col-span-5 relative">
-        <div class="glass-panel-glow rounded-3xl p-3 relative overflow-hidden group">
-          
-          <!-- Top HUD overlay in 3D frame -->
-          <div class="absolute top-6 left-6 z-20 flex items-center gap-2 pointer-events-none">
-            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-            <span class="text-[11px] font-mono tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-md border border-emerald-500/30">
-              3D DIGITAL TWIN • LIVE TOPOLOGY
-            </span>
-          </div>
-
-          <div class="absolute top-6 right-6 z-20 flex items-center gap-2">
-            <button id="toggleWireframeBtn" class="text-[11px] font-mono px-3 py-1 rounded bg-slate-900/90 text-brand-bronzeLight border border-brand-bronze/40 hover:bg-brand-bronze hover:text-black transition-colors" title="Toggle Blueprint Skeleton">
-              Wireframe
-            </button>
-            <button id="resetViewBtn" class="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-900/90 text-slate-300 border border-slate-700 hover:text-white" title="Reset Camera">
-              Reset
-            </button>
-          </div>
-
-          <!-- 3D Canvas Container -->
-          <div id="hero3dContainer" class="w-full h-[480px] rounded-2xl bg-gradient-to-b from-[#0f151f] to-[#07090d] cursor-grab active:cursor-grabbing relative">
-            <!-- Canvas is appended here via Three.js -->
-          </div>
-
-          <!-- Interactive Hint -->
-          <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 px-4 py-1.5 rounded-full glass-panel text-[11px] font-mono text-slate-400 pointer-events-none flex items-center gap-2">
-            <i data-lucide="move-3d" class="w-4 h-4 text-brand-bronze"></i>
-            <span>Drag to rotate • Scroll to zoom • Interactive Node Inspection</span>
-          </div>
-
+        <div class="flex flex-wrap gap-x-7 gap-y-2 pt-3 text-sm text-ink/70">
+          <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-crimson"></i> Quality-verified suppliers</span>
+          <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-crimson"></i> Transparent pricing</span>
+          <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-crimson"></i> Timely delivery</span>
         </div>
       </div>
 
+      <!-- Profile card -->
+      <div class="lg:col-span-5 fade-in">
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-silver-200 via-white to-sandal-200 blur-sm"></div>
+          <div class="relative bg-white silver-border rounded-[1.75rem] p-8 shadow-xl">
+            <div class="flex items-center gap-5">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-crimson-light to-crimson-dark flex items-center justify-center text-white font-display text-4xl font-bold ring-4 ring-silver-200">M</div>
+              <div>
+                <div class="font-display text-2xl font-bold">Muthu</div>
+                <div class="text-sm text-crimson font-semibold">Vendor Relationship Specialist</div>
+                <div class="text-xs text-silver-500 mt-0.5">Infrastructure &amp; Construction Materials</div>
+              </div>
+            </div>
+            <div class="silver-line my-6"></div>
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div class="rounded-xl bg-sandal-50 py-4">
+                <div class="font-display text-2xl font-bold text-crimson">15+</div>
+                <div class="text-[11px] text-ink/60 mt-1">Years Experience</div>
+              </div>
+              <div class="rounded-xl bg-sandal-50 py-4">
+                <div class="font-display text-2xl font-bold text-crimson">100+</div>
+                <div class="text-[11px] text-ink/60 mt-1">Vetted Suppliers</div>
+              </div>
+              <div class="rounded-xl bg-sandal-50 py-4">
+                <div class="font-display text-2xl font-bold text-crimson">50+</div>
+                <div class="text-[11px] text-ink/60 mt-1">Corporate Projects</div>
+              </div>
+            </div>
+            <div class="mt-6 space-y-3 text-sm">
+              <div class="flex items-center gap-3"><i data-lucide="building-2" class="w-4 h-4 text-silver-500"></i> IT Parks · MNC Campuses · Data Centers</div>
+              <div class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-silver-500"></i> Operating across South India</div>
+              <div class="flex items-center gap-3"><i data-lucide="shield-check" class="w-4 h-4 text-silver-500"></i> Quality &amp; compliance focused</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="silver-line"></div>
   </section>
 
-  <!-- WHO IS A VSR? (PROFESSIONAL POSITIONING / ANTI-BROKER) -->
-  <section id="about" class="py-20 relative border-t border-slate-800/80 bg-slate-950/40">
-    <div class="max-w-7xl mx-auto px-6">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="text-xs font-mono uppercase tracking-widest text-brand-bronze mb-2">Defining the Discipline</div>
-        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
-          Why Enterprise Leaders Rely on a <span class="gradient-text-bronze">Vendor Relationship Specialist</span>
-        </h2>
-        <p class="text-slate-400 text-base mt-4 leading-relaxed">
-          High-capital enterprise builds fail when treated as ad-hoc brokerage. Muthu operates at the board and procurement committee level as an embedded partner managing risk, material provenance, and multi-year contract stability.
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-14 items-center">
+      <div class="lg:col-span-5 fade-in">
+        <div class="text-xs tracking-[.25em] uppercase text-crimson font-semibold mb-3">About Muthu</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold leading-tight">The bridge between corporate projects and the right manufacturers</h2>
+        <div class="w-16 h-1 bg-crimson rounded mt-6"></div>
+      </div>
+      <div class="lg:col-span-7 space-y-5 text-ink/75 leading-relaxed fade-in">
+        <p>
+          As a Vendor Relationship Specialist, Muthu works at the meeting point of IT companies, MNCs and the manufacturers who supply the materials their buildings are made of — structural steel, bricks, cement and more.
         </p>
+        <p>
+          Rather than leaving procurement teams to chase quotes, Muthu builds long-term supplier relationships, validates quality, negotiates fair terms and keeps deliveries on schedule — so project teams can stay focused on construction.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4 pt-3">
+          <div class="flex gap-3"><i data-lucide="handshake" class="w-5 h-5 text-crimson mt-0.5 shrink-0"></i><span class="text-sm"><b class="text-ink">Relationship-first.</b> Long-standing ties with manufacturers and dealers.</span></div>
+          <div class="flex gap-3"><i data-lucide="scale" class="w-5 h-5 text-crimson mt-0.5 shrink-0"></i><span class="text-sm"><b class="text-ink">Fair &amp; transparent.</b> Clear quotes with no hidden surprises.</span></div>
+          <div class="flex gap-3"><i data-lucide="badge-check" class="w-5 h-5 text-crimson mt-0.5 shrink-0"></i><span class="text-sm"><b class="text-ink">Quality assured.</b> Certified material and test reports.</span></div>
+          <div class="flex gap-3"><i data-lucide="truck" class="w-5 h-5 text-crimson mt-0.5 shrink-0"></i><span class="text-sm"><b class="text-ink">On-time delivery.</b> Coordinated logistics to your site.</span></div>
+        </div>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Card 1 -->
-        <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-brand-bronze/40 transition-all hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-brand-bronze/10 border border-brand-bronze/30 flex items-center justify-center text-brand-bronze mb-6 group-hover:scale-110 transition-transform">
-            <i data-lucide="scale" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-xl font-display font-bold text-white mb-3">Direct OEM Allocation & Hedging</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Securing primary steel mill quotas (Tata Steel, JSW, SAIL, ArcelorMittal) directly onto the IT developer’s balance sheet. Eliminating opaque spot-broker premiums and hedging against market volatility.
-          </p>
-          <div class="text-xs font-mono text-brand-bronzeLight flex items-center gap-1.5">
-            <i data-lucide="check" class="w-4 h-4"></i> Cost reduction benchmark: 11-18%
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-brand-bronze/40 transition-all hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-6 group-hover:scale-110 transition-transform">
-            <i data-lucide="shield-alert" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-xl font-display font-bold text-white mb-3">Rigorous QA & Metallurgical Audit</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Every batch of structural rebars, high-grade AAC autoclaved blocks, and structural glazing undergoes certified test certificate (MTC) audits before arriving at mission-critical IT sites.
-          </p>
-          <div class="text-xs font-mono text-sky-300 flex items-center gap-1.5">
-            <i data-lucide="check" class="w-4 h-4"></i> 100% Traceability & NABL Lab Verification
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-brand-bronze/40 transition-all hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
-            <i data-lucide="clock" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-xl font-display font-bold text-white mb-3">Just-In-Time (JIT) Staging Hubs</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Congested IT corridor logistics synchronized down to delivery hour. Establishing peripheral buffer yards so high-rise construction never halts due to municipal transit windows.
-          </p>
-          <div class="text-xs font-mono text-emerald-300 flex items-center gap-1.5">
-            <i data-lucide="check" class="w-4 h-4"></i> Zero crane downtime guaranteed
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
-  <!-- INTERACTIVE 3D MATERIAL LAB & SPECIFICATION INSPECTOR -->
-  <section id="3d-showcase" class="py-24 relative overflow-hidden">
+  <!-- EXPERTISE -->
+  <section id="expertise" class="py-24 sandal-bg">
     <div class="max-w-7xl mx-auto px-6">
-      
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+      <div class="text-center max-w-2xl mx-auto mb-14 fade-in">
+        <div class="text-xs tracking-[.25em] uppercase text-crimson font-semibold mb-3">What I Do</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold">Areas of Expertise</h2>
+        <div class="silver-line mt-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card p-8 fade-in">
+          <div class="w-12 h-12 rounded-xl bg-crimson/10 text-crimson flex items-center justify-center mb-5"><i data-lucide="search-check" class="w-6 h-6"></i></div>
+          <h3 class="font-display text-xl font-bold mb-2">Supplier Sourcing</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">Identifying and shortlisting reliable manufacturers that match project specifications, volumes and budgets.</p>
+        </div>
+        <div class="card p-8 fade-in">
+          <div class="w-12 h-12 rounded-xl bg-silver-200 text-silver-500 flex items-center justify-center mb-5"><i data-lucide="file-signature" class="w-6 h-6"></i></div>
+          <h3 class="font-display text-xl font-bold mb-2">Negotiation &amp; Contracts</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">Securing competitive rates, clear payment terms and supply agreements that protect both sides.</p>
+        </div>
+        <div class="card p-8 fade-in">
+          <div class="w-12 h-12 rounded-xl bg-sandal-200 text-sandal-500 flex items-center justify-center mb-5"><i data-lucide="clipboard-check" class="w-6 h-6"></i></div>
+          <h3 class="font-display text-xl font-bold mb-2">Quality Assurance</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">Checking grades, certifications and test reports so every delivery meets the required standard.</p>
+        </div>
+        <div class="card p-8 fade-in">
+          <div class="w-12 h-12 rounded-xl bg-sandal-200 text-sandal-500 flex items-center justify-center mb-5"><i data-lucide="route" class="w-6 h-6"></i></div>
+          <h3 class="font-display text-xl font-bold mb-2">Logistics Coordination</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">Scheduling dispatch and site deliveries to match construction timelines and avoid idle time.</p>
+        </div>
+        <div class="card p-8 fade-in">
+          <div class="w-12 h-12 rounded-xl bg-crimson/10 text-crimson flex items-center justify-center mb-5"><i data-lucide="users" class="w-6 h-6"></i></div>
+          <h3 class="font-display text-xl font-bold mb-2">Vendor Management</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">Ongoing performance tracking and relationship care to keep supply consistent over the long term.</p>
+        </div>
+        <div class="card p-8 fade-in">
+          <div class="w-12 h-12 rounded-xl bg-silver-200 text-silver-500 flex items-center justify-center mb-5"><i data-lucide="trending-down" class="w-6 h-6"></i></div>
+          <h3 class="font-display text-xl font-bold mb-2">Cost Optimisation</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">Bulk planning and direct manufacturer links to help corporate clients get better value on every order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section id="materials" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 fade-in">
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-bronze/10 text-brand-bronzeLight border border-brand-bronze/30 font-mono text-xs mb-3">
-            <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
-            <span>INTERACTIVE SPECIFICATION SUITE</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
-            Material Twin Lab <span class="gradient-text-bronze">& Technical Specs</span>
-          </h2>
-          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
-            Select high-capacity commodities below to inspect real-time 3D models, engineering grades, tensile specifications, and Muthu's enterprise supply throughput.
-          </p>
+          <div class="text-xs tracking-[.25em] uppercase text-crimson font-semibold mb-3">Materials Portfolio</div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold">Materials I Source</h2>
         </div>
-
-        <!-- Material Switcher Tabs -->
-        <div class="flex flex-wrap gap-2 p-1.5 rounded-2xl glass-panel border border-slate-700/80" id="materialTabs">
-          <button data-mat="steel" class="mat-tab active-tab px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center gap-2 bg-brand-bronze text-slate-950 shadow-lg">
-            <i data-lucide="box" class="w-4 h-4"></i> Fe 550D TMT Steel
-          </button>
-          <button data-mat="brick" class="mat-tab px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800">
-            <i data-lucide="layers" class="w-4 h-4"></i> AAC Lightweight Blocks
-          </button>
-          <button data-mat="concrete" class="mat-tab px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800">
-            <i data-lucide="cylinder" class="w-4 h-4"></i> High-Grade RMC Cement
-          </button>
-          <button data-mat="glass" class="mat-tab px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800">
-            <i data-lucide="maximize" class="w-4 h-4"></i> Facade Structural Glazing
-          </button>
+        <div id="matTabs" class="flex flex-wrap gap-2">
+          <button data-m="steel" class="mat-tab tab-active px-5 py-2 rounded-full border border-silver-300 text-sm font-semibold transition">Steel</button>
+          <button data-m="bricks" class="mat-tab px-5 py-2 rounded-full border border-silver-300 text-sm font-semibold transition hover:border-crimson">Bricks &amp; Blocks</button>
+          <button data-m="cement" class="mat-tab px-5 py-2 rounded-full border border-silver-300 text-sm font-semibold transition hover:border-crimson">Cement &amp; Concrete</button>
+          <button data-m="finish" class="mat-tab px-5 py-2 rounded-full border border-silver-300 text-sm font-semibold transition hover:border-crimson">Glass &amp; Finishes</button>
         </div>
       </div>
 
-      <!-- 3D Spec Studio Card -->
-      <div class="glass-panel rounded-3xl border border-slate-800 p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-2xl relative">
-        
-        <!-- 3D Object Viewport -->
-        <div class="lg:col-span-7 relative h-[420px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#121924] via-[#0d121a] to-[#080b10] border border-slate-700/60 shadow-inner flex items-center justify-center">
-          
-          <div id="material3dContainer" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
-
-          <!-- Lighting / Rotation controls -->
-          <div class="absolute bottom-4 left-4 z-10 flex items-center gap-2 glass-panel px-3 py-1.5 rounded-xl border border-slate-700 text-xs font-mono text-slate-300">
-            <button id="toggleMatAutoRotate" class="flex items-center gap-1.5 hover:text-brand-bronze transition-colors">
-              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
-              <span id="rotateStateLabel">Pause Spin</span>
-            </button>
-            <span class="text-slate-600">|</span>
-            <button id="resetMatView" class="hover:text-brand-bronze transition-colors">Reset Angle</button>
-          </div>
-
-          <div class="absolute top-4 right-4 z-10 font-mono text-[11px] text-brand-bronzeLight bg-slate-900/80 px-2.5 py-1 rounded border border-brand-bronze/30">
-            PHYSI-BASED SHADING (PBR)
+      <div class="card silver-border p-8 lg:p-10 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-gradient-to-br from-sandal-100 via-white to-silver-100 border border-sandal-200 h-64 flex items-center justify-center">
+            <i id="matIcon" data-lucide="layers" class="w-24 h-24 text-crimson"></i>
           </div>
         </div>
-
-        <!-- Technical Specification Panel -->
-        <div class="lg:col-span-5 space-y-6">
-          <div>
-            <div id="matBadge" class="text-xs font-mono text-brand-bronze uppercase tracking-widest">COMMODITY CODE: TMT-FE550D</div>
-            <h3 id="matTitle" class="text-2xl lg:text-3xl font-display font-bold text-white mt-1">
-              Primary Fe 550D Rebars & I-Beams
-            </h3>
-            <p id="matDesc" class="text-slate-400 text-sm mt-2 leading-relaxed">
-              Thermo-Mechanically Treated high-ductility rebar manufactured for ultra-tall IT campuses and earthquake-resistant foundations. Direct allocation from JSW, Tata, and JSPL.
-            </p>
-          </div>
-
-          <!-- Spec Matrix Table -->
-          <div class="space-y-3 font-mono text-xs">
-            <div class="flex justify-between items-center py-2 border-b border-slate-800">
-              <span class="text-slate-400">Tensile / Yield Strength</span>
-              <span id="specTensile" class="text-white font-semibold">550 N/mm² (Min 600 UTS)</span>
-            </div>
-            <div class="flex justify-between items-center py-2 border-b border-slate-800">
-              <span class="text-slate-400">Regulatory Compliance</span>
-              <span id="specStandard" class="text-brand-bronzeLight font-semibold">IS 1786:2008 / ASTM A615</span>
-            </div>
-            <div class="flex justify-between items-center py-2 border-b border-slate-800">
-              <span class="text-slate-400">Muthu Sourcing Throughput</span>
-              <span id="specThroughput" class="text-emerald-400 font-semibold">25,000 MT / Month Capacity</span>
-            </div>
-            <div class="flex justify-between items-center py-2 border-b border-slate-800">
-              <span class="text-slate-400">Primary Enterprise Clients</span>
-              <span id="specClients" class="text-white font-semibold">Tier-1 IT Parks & Data Centers</span>
-            </div>
-          </div>
-
-          <div class="pt-2 flex items-center gap-3">
-            <button onclick="requestQuoteModal()" class="flex-1 gradient-bronze-btn text-slate-950 font-bold py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2">
-              <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
-              <span>Request Grade Allocation Sheet</span>
-            </button>
-          </div>
-
+        <div class="lg:col-span-7 space-y-5">
+          <h3 id="matTitle" class="font-display text-2xl lg:text-3xl font-bold"></h3>
+          <p id="matDesc" class="text-ink/70 leading-relaxed"></p>
+          <ul id="matList" class="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm"></ul>
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- STRATEGIC ECOSYSTEM: THE ENTERPRISE BRIDGE -->
-  <section id="ecosystem" class="py-20 bg-slate-950/60 border-y border-slate-800/80">
+  <!-- WORK -->
+  <section id="work" class="py-24 sandal-bg">
     <div class="max-w-7xl mx-auto px-6">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="text-xs font-mono uppercase tracking-widest text-brand-bronze mb-2">Network Architecture</div>
-        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
-          The Enterprise-to-Manufacturer Sourcing Bridge
-        </h2>
-        <p class="text-slate-400 text-sm sm:text-base mt-3">
-          How Muthu connects multi-billion dollar tech enterprises directly with high-volume industrial manufacturers without transactional friction.
-        </p>
+      <div class="text-center max-w-2xl mx-auto mb-14 fade-in">
+        <div class="text-xs tracking-[.25em] uppercase text-crimson font-semibold mb-3">Selected Engagements</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold">Projects Supported</h2>
+        <div class="silver-line mt-6"></div>
       </div>
-
-      <!-- Flow Architecture Diagram Card -->
-      <div class="glass-panel rounded-3xl p-8 border border-slate-800">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-          
-          <!-- Node 1: IT & MNC Titans -->
-          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-700/80 space-y-4 relative">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono px-2 py-1 rounded bg-sky-500/20 text-sky-400 border border-sky-500/30">CLIENT DEMAND</span>
-              <i data-lucide="building-2" class="w-6 h-6 text-sky-400"></i>
-            </div>
-            <h4 class="text-lg font-display font-bold text-white">Tech Giants & Global MNCs</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              IT Campuses, Data Centers (Hyper-scale), Smart Cities, and R&D Tech Parks demanding stringent SLA timelines and zero non-compliance tolerance.
-            </p>
-            <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-300 space-y-1">
-              <div>• Budget forecasting</div>
-              <div>• High ESG rating mandates</div>
-              <div>• Strict NABL metallurgical criteria</div>
-            </div>
-          </div>
-
-          <!-- Node 2: Muthu (VSR Nerve Center) -->
-          <div class="p-6 rounded-2xl bg-gradient-to-b from-brand-bronze/15 to-slate-900/90 border-2 border-brand-bronze/50 space-y-4 shadow-xl shadow-brand-bronze/10 relative">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono px-2.5 py-1 rounded bg-brand-bronze text-slate-950 font-bold">VSR STRATEGY HUB</span>
-              <div class="w-3 h-3 rounded-full bg-brand-bronze animate-ping"></div>
-            </div>
-            <h4 class="text-lg font-display font-bold text-white">Muthu • Relationship Specialist</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              The sole orchestrator: structuring volume allocations, contract hedges, independent quality validation, credit terms, and on-schedule site dispatch.
-            </p>
-            <div class="pt-3 border-t border-brand-bronze/30 text-[11px] font-mono text-brand-bronzeLight space-y-1">
-              <div>✓ End-to-end price stabilization</div>
-              <div>✓ Direct manufacturer billing</div>
-              <div>✓ Priority factory rolling slots</div>
-            </div>
-          </div>
-
-          <!-- Node 3: Tier 1 Producers -->
-          <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-700/80 space-y-4 relative">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono px-2 py-1 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">SUPPLY MILLS</span>
-              <i data-lucide="factory" class="w-6 h-6 text-amber-400"></i>
-            </div>
-            <h4 class="text-lg font-display font-bold text-white">Heavy Industrial OEMs</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Integrated blast furnace steel plants, automated autoclaved aerated concrete (AAC) factories, ready-mix silos, and glass processing units.
-            </p>
-            <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-300 space-y-1">
-              <div>• Rolling mill scheduling</div>
-              <div>• Direct rake & multi-axle logistics</div>
-              <div>• Certified mill test certificates</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Flow Benefit Highlights -->
-        <div class="mt-8 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-4 text-center font-mono text-xs">
-          <div>
-            <div class="text-brand-bronze font-bold text-lg font-display">0%</div>
-            <div class="text-slate-400">Spot Brokerage Markups</div>
-          </div>
-          <div>
-            <div class="text-emerald-400 font-bold text-lg font-display">100%</div>
-            <div class="text-slate-400">Mill Direct Provenance</div>
-          </div>
-          <div>
-            <div class="text-sky-400 font-bold text-lg font-display">48-Hour</div>
-            <div class="text-slate-400">Emergency Dispatch Buffer</div>
-          </div>
-          <div>
-            <div class="text-brand-bronzeLight font-bold text-lg font-display">IS / ASTM</div>
-            <div class="text-slate-400">Pre-Vetted Standard</div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card overflow-hidden fade-in">
+          <div class="h-2 bg-gradient-to-r from-crimson to-crimson-light"></div>
+          <div class="p-8 space-y-3">
+            <span class="text-[11px] font-semibold tracking-widest uppercase text-crimson">IT Park</span>
+            <h3 class="font-display text-xl font-bold">Technology Campus Build</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">Coordinated large-volume steel and masonry supply from multiple manufacturers across the construction schedule.</p>
+            <div class="silver-line"></div>
+            <div class="text-xs text-silver-500">Steel · Blocks · Cement</div>
           </div>
         </div>
-
+        <div class="card overflow-hidden fade-in">
+          <div class="h-2 bg-gradient-to-r from-silver-300 to-silver-100"></div>
+          <div class="p-8 space-y-3">
+            <span class="text-[11px] font-semibold tracking-widest uppercase text-crimson">MNC Office</span>
+            <h3 class="font-display text-xl font-bold">Corporate Headquarters</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">Sourced quality-certified structural and finishing materials with scheduled site deliveries.</p>
+            <div class="silver-line"></div>
+            <div class="text-xs text-silver-500">Structural · Glazing · Finishes</div>
+          </div>
+        </div>
+        <div class="card overflow-hidden fade-in">
+          <div class="h-2 bg-gradient-to-r from-sandal-400 to-sandal-200"></div>
+          <div class="p-8 space-y-3">
+            <span class="text-[11px] font-semibold tracking-widest uppercase text-crimson">Data Center</span>
+            <h3 class="font-display text-xl font-bold">Mission-Critical Facility</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">Managed strict-specification material supply with documented testing and dependable delivery windows.</p>
+            <div class="silver-line"></div>
+            <div class="text-xs text-silver-500">High-grade Steel · RMC · Precast</div>
+          </div>
+        </div>
       </div>
-
     </div>
   </section>
 
-  <!-- KEY ENGAGEMENTS & HIGH-PROFILE CASE STUDIES -->
-  <section id="portfolio" class="py-24 relative">
-    <div class="max-w-7xl mx-auto px-6">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <div class="text-xs font-mono uppercase tracking-widest text-brand-bronze mb-2">Verified Track Record</div>
-          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
-            High-Impact Corporate Projects
-          </h2>
-        </div>
-        <p class="text-slate-400 text-sm max-w-md">
-          A snapshot of multi-million square foot IT campuses and mission-critical installations delivered under Muthu’s vendor management protocol.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Project 1 -->
-        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-bronze/50 transition-all flex flex-col group">
-          <div class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 relative p-6 flex flex-col justify-between overflow-hidden">
-            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#d49b4d_1px,transparent_1px)] [background-size:16px_16px]"></div>
-            <div class="flex justify-between items-start z-10">
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-brand-bronze text-slate-950 font-bold">HYPER-SCALE IT PARK</span>
-              <span class="text-xs font-mono text-slate-400">Bengaluru SEZ</span>
-            </div>
-            <div class="z-10">
-              <div class="text-xs font-mono text-brand-bronzeLight">4.2 Million Sq. Ft Campus</div>
-              <h4 class="text-xl font-display font-bold text-white">Tier-4 Global Tech Campus</h4>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <p class="text-slate-300 text-xs leading-relaxed">
-              Managed 68,000 Metric Tons of structural steel and 1.8M specialized high-density AAC masonry units over 22 months with continuous price lock despite volatile global steel spikes.
-            </p>
-            <div class="space-y-2 border-t border-slate-800 pt-3 text-xs font-mono">
-              <div class="flex justify-between text-slate-400">
-                <span>Direct Savings:</span>
-                <span class="text-emerald-400 font-bold">₹14.2 Crores</span>
-              </div>
-              <div class="flex justify-between text-slate-400">
-                <span>Supply Outages:</span>
-                <span class="text-white font-bold">Zero (0 Hours)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-bronze/50 transition-all flex flex-col group">
-          <div class="h-48 bg-gradient-to-br from-[#121c2c] to-[#0a1018] relative p-6 flex flex-col justify-between overflow-hidden">
-            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
-            <div class="flex justify-between items-start z-10">
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-sky-500/20 text-sky-400 border border-sky-500/40">DATA CENTER FACILITY</span>
-              <span class="text-xs font-mono text-slate-400">Hyderabad Corridor</span>
-            </div>
-            <div class="z-10">
-              <div class="text-xs font-mono text-sky-300">50MW Critical Power Pods</div>
-              <h4 class="text-xl font-display font-bold text-white">Hyperscale Cloud Data Pod</h4>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <p class="text-slate-300 text-xs leading-relaxed">
-              Engineered procurement for high-load slab densities, seismic dampening structural frames, and thermal-efficient acoustic envelope blocks with NABL third-party verification.
-            </p>
-            <div class="space-y-2 border-t border-slate-800 pt-3 text-xs font-mono">
-              <div class="flex justify-between text-slate-400">
-                <span>Lead Time Optimized:</span>
-                <span class="text-emerald-400 font-bold">-32% Faster</span>
-              </div>
-              <div class="flex justify-between text-slate-400">
-                <span>QA Pass Rate:</span>
-                <span class="text-white font-bold">100.0% Initial Run</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-bronze/50 transition-all flex flex-col group">
-          <div class="h-48 bg-gradient-to-br from-[#1c1812] to-[#100e0a] relative p-6 flex flex-col justify-between overflow-hidden">
-            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#f3c784_1px,transparent_1px)] [background-size:16px_16px]"></div>
-            <div class="flex justify-between items-start z-10">
-              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-brand-bronzeLight/20 text-brand-bronzeLight border border-brand-bronze/40">MNC HEADQUARTERS</span>
-              <span class="text-xs font-mono text-slate-400">Chennai OMR</span>
-            </div>
-            <div class="z-10">
-              <div class="text-xs font-mono text-brand-bronzeLight">32-Story Twin Towers</div>
-              <h4 class="text-xl font-display font-bold text-white">Fintech Global Delivery Centre</h4>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <p class="text-slate-300 text-xs leading-relaxed">
-              Orchestrated supply agreements for acoustic inter-floor lightweight masonry and high-performance Low-E double glazing for IGBC Platinum LEED certification requirements.
-            </p>
-            <div class="space-y-2 border-t border-slate-800 pt-3 text-xs font-mono">
-              <div class="flex justify-between text-slate-400">
-                <span>LEED Credits Earned:</span>
-                <span class="text-emerald-400 font-bold">+18 Material Pts</span>
-              </div>
-              <div class="flex justify-between text-slate-400">
-                <span>Delivery Adherence:</span>
-                <span class="text-white font-bold">99.8% On-Time</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- INTERACTIVE ENTERPRISE SOURCING CALCULATOR -->
-  <section id="roi-calculator" class="py-20 bg-slate-950/60 border-t border-slate-800/80">
+  <!-- ESTIMATOR -->
+  <section id="estimator" class="py-24 bg-white">
     <div class="max-w-5xl mx-auto px-6">
-      
-      <div class="glass-panel-glow rounded-3xl p-8 lg:p-12 border border-slate-700/80">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-brand-bronze/10 text-brand-bronzeLight border border-brand-bronze/30 font-mono text-xs mb-2">
-            <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
-            <span>TRANSPARENCY BENCHMARK</span>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">
-            Enterprise Direct-Sourcing Cost Optimizer
-          </h2>
-          <p class="text-slate-400 text-xs sm:text-sm mt-2">
-            Estimate direct corporate cost savings by partnering with a dedicated Vendor Relationship Specialist versus unvetted fragmented broker channels.
-          </p>
+      <div class="card silver-border p-8 lg:p-12 fade-in">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <div class="text-xs tracking-[.25em] uppercase text-crimson font-semibold mb-3">Quick Estimator</div>
+          <h2 class="font-display text-3xl font-bold">Estimate Your Potential Savings</h2>
+          <p class="text-sm text-ink/60 mt-2">An indicative figure based on typical savings from direct manufacturer sourcing.</p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          
-          <!-- Sliders -->
-          <div class="md:col-span-7 space-y-6">
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-7 space-y-7">
             <div>
-              <div class="flex justify-between text-xs font-mono mb-2">
-                <span class="text-slate-300">Target Build Area:</span>
-                <span id="areaLabel" class="text-brand-bronzeLight font-bold">1,000,000 Sq. Ft</span>
-              </div>
-              <input id="areaInput" type="range" min="100000" max="5000000" step="50000" value="1000000" class="w-full accent-brand-bronze h-2 bg-slate-800 rounded-lg cursor-pointer">
-              <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
-                <span>100K Sq. Ft</span>
-                <span>2.5M Sq. Ft</span>
-                <span>5M Sq. Ft</span>
-              </div>
+              <div class="flex justify-between text-sm mb-2"><span class="font-medium">Material budget</span><span id="budgetLabel" class="font-bold text-crimson">₹ 80 Crores</span></div>
+              <input id="budgetInput" type="range" min="5" max="500" step="5" value="80" class="w-full">
             </div>
-
             <div>
-              <div class="flex justify-between text-xs font-mono mb-2">
-                <span class="text-slate-300">Estimated Construction Material Budget:</span>
-                <span id="budgetLabel" class="text-brand-bronzeLight font-bold">₹ 80 Crores</span>
-              </div>
-              <input id="budgetInput" type="range" min="10" max="500" step="5" value="80" class="w-full accent-brand-bronze h-2 bg-slate-800 rounded-lg cursor-pointer">
-              <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
-                <span>₹ 10 Cr</span>
-                <span>₹ 250 Cr</span>
-                <span>₹ 500 Cr</span>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between text-xs font-mono mb-2">
-                <span class="text-slate-300">Material Category:</span>
-                <span id="typeLabel" class="text-slate-200 font-bold">Structural Steel & Advanced Masonry</span>
-              </div>
-              <select id="typeSelect" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-slate-200 font-mono focus:border-brand-bronze focus:outline-none">
-                <option value="12">Structural Steel + AAC Masonry (Typical 12% Cost Delta)</option>
-                <option value="15">Full Turnkey Civil Package: Rebar, Cement & Glazing (15% Delta)</option>
-                <option value="10">High-Density Precast & Seismic Reinforced (10% Delta)</option>
+              <div class="text-sm font-medium mb-2">Package type</div>
+              <select id="typeSelect" class="w-full px-4 py-3 text-sm">
+                <option value="10">Steel &amp; masonry supply (~10%)</option>
+                <option value="12">Full civil package (~12%)</option>
+                <option value="8">Precast &amp; specialised items (~8%)</option>
               </select>
             </div>
           </div>
-
-          <!-- Calculated Output Card -->
-          <div class="md:col-span-5 bg-gradient-to-br from-slate-900 to-[#121824] p-6 rounded-2xl border border-brand-bronze/30 shadow-xl space-y-5 text-center">
-            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">PROJECTED VALUE DELIVERED</div>
-            <div>
-              <div class="text-xs text-slate-400 font-mono">Estimated Direct Capital Savings:</div>
-              <div id="savingsResult" class="text-3xl lg:text-4xl font-display font-extrabold text-emerald-400 mt-1">
-                ₹ 9.60 Crores
-              </div>
-              <div class="text-[11px] font-mono text-slate-500 mt-1">Through mill quota & anti-margin contracting</div>
-            </div>
-
-            <div class="pt-4 border-t border-slate-800/80 text-left space-y-2 text-xs font-mono text-slate-300">
-              <div class="flex items-center gap-2">
-                <i data-lucide="shield-check" class="w-4 h-4 text-brand-bronze"></i>
-                <span>Direct Mill Invoicing (No Broker Markup)</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="truck" class="w-4 h-4 text-brand-bronze"></i>
-                <span>Zero Stoppage Buffer Protocol</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-                <span>Independent Metallurgical Lab Audit</span>
-              </div>
-            </div>
-
-            <a href="#contact" class="w-full inline-block gradient-bronze-btn text-slate-950 font-bold py-3 rounded-xl text-xs uppercase tracking-wider">
-              Discuss Project Procurement
-            </a>
+          <div class="md:col-span-5 rounded-2xl bg-gradient-to-br from-sandal-100 to-white border border-sandal-200 p-7 text-center">
+            <div class="text-xs uppercase tracking-widest text-silver-500">Potential savings</div>
+            <div id="savingsResult" class="font-display text-4xl font-bold text-crimson mt-2">₹ 8.00 Cr</div>
+            <a href="#contact" class="btn-red inline-block mt-5 px-6 py-3 rounded-full text-sm font-semibold">Discuss My Project</a>
           </div>
-
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- CONTACT & ENGAGEMENT DESK -->
-  <section id="contact" class="py-24 relative">
-    <div class="max-w-5xl mx-auto px-6">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <div class="text-xs font-mono uppercase tracking-widest text-brand-bronze mb-2">Initiate Alignment</div>
-        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
-          Engage Muthu for Your Next Enterprise Build
-        </h2>
-        <p class="text-slate-400 text-sm mt-3">
-          Available for corporate infrastructure committees, high-volume procurement tenders, and ongoing multi-site material relationship management.
-        </p>
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 sandal-bg">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14 fade-in">
+        <div class="text-xs tracking-[.25em] uppercase text-crimson font-semibold mb-3">Contact</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold">Let's Plan Your Next Supply</h2>
+        <div class="silver-line mt-6"></div>
       </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- Left: Direct Info -->
-        <div class="lg:col-span-5 space-y-6">
-          <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-5">
-            <h4 class="font-display font-bold text-lg text-white">Executive Desk</h4>
-            
-            <div class="flex items-start gap-3.5">
-              <div class="p-2.5 rounded-lg bg-brand-bronze/10 text-brand-bronze mt-1">
-                <i data-lucide="user" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-400">Professional Lead</div>
-                <div class="font-semibold text-white">Muthu</div>
-                <div class="text-xs text-brand-bronzeLight font-mono">Senior Vendor Relationship Specialist (VSR)</div>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3.5">
-              <div class="p-2.5 rounded-lg bg-brand-bronze/10 text-brand-bronze mt-1">
-                <i data-lucide="map-pin" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-400">Headquarters / Operations</div>
-                <div class="text-white text-sm">Tech Corridors: Bengaluru • Hyderabad • Chennai • Pune</div>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3.5">
-              <div class="p-2.5 rounded-lg bg-brand-bronze/10 text-brand-bronze mt-1">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-400">Direct Inquiries</div>
-                <div class="text-brand-bronzeLight font-mono text-sm">muthu.vsr.procurement@gmail.com</div>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3.5">
-              <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 mt-1">
-                <i data-lucide="badge-check" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-400">Engagement Framework</div>
-                <div class="text-white text-xs">Direct Corporate SLA • Fixed Retainer / Milestone Allocation</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass-panel p-5 rounded-2xl border border-slate-800 text-xs font-mono text-slate-400 flex items-center gap-3">
-            <i data-lucide="lock" class="w-5 h-5 text-brand-bronze flex-shrink-0"></i>
-            <span>All enterprise tender discussions are conducted under mutual Non-Disclosure Agreement (NDA).</span>
-          </div>
+      <div class="grid lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-5 card p-8 space-y-6 fade-in">
+          <div class="flex gap-4"><div class="w-11 h-11 rounded-full bg-crimson/10 text-crimson flex items-center justify-center shrink-0"><i data-lucide="user" class="w-5 h-5"></i></div><div><div class="text-xs text-silver-500">Name</div><div class="font-semibold">Muthu</div></div></div>
+          <div class="flex gap-4"><div class="w-11 h-11 rounded-full bg-crimson/10 text-crimson flex items-center justify-center shrink-0"><i data-lucide="phone" class="w-5 h-5"></i></div><div><div class="text-xs text-silver-500">Phone</div><div class="font-semibold">+91 00000 00000</div></div></div>
+          <div class="flex gap-4"><div class="w-11 h-11 rounded-full bg-crimson/10 text-crimson flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5"></i></div><div><div class="text-xs text-silver-500">Email</div><div class="font-semibold">hello@example.com</div></div></div>
+          <div class="flex gap-4"><div class="w-11 h-11 rounded-full bg-crimson/10 text-crimson flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5"></i></div><div><div class="text-xs text-silver-500">Location</div><div class="font-semibold">Tamil Nadu, India</div></div></div>
         </div>
-
-        <!-- Right: Inquiry Form -->
-        <div class="lg:col-span-7">
-          <form id="contactForm" class="glass-panel rounded-2xl p-8 border border-slate-800 space-y-5" onsubmit="handleContactSubmit(event)">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1.5">Executive Name *</label>
-                <input required type="text" placeholder="e.g. Rajesh Kumar" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-bronze focus:outline-none">
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1.5">Corporate / Enterprise Entity *</label>
-                <input required type="text" placeholder="e.g. MNC Tech Infra Ltd" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-bronze focus:outline-none">
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1.5">Corporate Email *</label>
-                <input required type="email" placeholder="name@company.com" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-bronze focus:outline-none">
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-400 mb-1.5">Phone / Direct Line *</label>
-                <input required type="tel" placeholder="+91 98765 43210" class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-bronze focus:outline-none">
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5">Primary Requirement Scope</label>
-              <select class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-2.5 text-sm text-slate-300 font-mono focus:border-brand-bronze focus:outline-none">
-                <option>Multi-Ton Fe 550D TMT Steel Direct Quotas</option>
-                <option>High-Rise AAC Block Sourcing & Just-In-Time Logistics</option>
-                <option>Complete Data Center / IT SEZ Procurement Management</option>
-                <option>Long-Term Vendor Risk & Compliance Audit (VSR)</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-xs font-mono text-slate-400 mb-1.5">Brief Project Description / Estimated Tonnage</label>
-              <textarea rows="4" placeholder="Mention project location, required volumes, timeline, and compliance standards..." class="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-bronze focus:outline-none"></textarea>
-            </div>
-
-            <button type="submit" class="w-full gradient-bronze-btn text-slate-950 font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              <span>Transmit Requirement to Muthu's Desk</span>
-            </button>
-            <div id="formSuccessMessage" class="hidden text-center text-xs font-mono text-emerald-400 pt-2">
-              ✓ Transmission logged. Muthu will review the specification and connect within 4 business hours.
-            </div>
-          </form>
-        </div>
-
+        <form class="lg:col-span-7 card p-8 space-y-4 fade-in" onsubmit="event.preventDefault(); document.getElementById('okMsg').classList.remove('hidden'); this.reset();">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input required placeholder="Your name" class="px-4 py-3 text-sm">
+            <input required placeholder="Company" class="px-4 py-3 text-sm">
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input required type="email" placeholder="Email" class="px-4 py-3 text-sm">
+            <input required type="tel" placeholder="Phone" class="px-4 py-3 text-sm">
+          </div>
+          <select class="w-full px-4 py-3 text-sm text-ink/80">
+            <option>Steel</option><option>Bricks &amp; Blocks</option><option>Cement &amp; Concrete</option><option>Glass &amp; Finishes</option><option>Multiple materials</option>
+          </select>
+          <textarea rows="4" placeholder="Tell us about your project..." class="w-full px-4 py-3 text-sm"></textarea>
+          <button class="btn-red w-full py-3.5 rounded-full font-semibold flex items-center justify-center gap-2"><i data-lucide="send" class="w-4 h-4"></i> Send Enquiry</button>
+          <div id="okMsg" class="hidden text-center text-sm text-crimson font-medium">Thank you — your enquiry has been noted. Muthu will get back to you shortly.</div>
+        </form>
       </div>
-
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 border-t border-slate-800/80 bg-[#070a0e] text-slate-500 text-xs font-mono">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+  <footer class="bg-ink text-sandal-200">
+    <div class="silver-line"></div>
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
       <div class="flex items-center gap-3">
-        <div class="w-7 h-7 rounded-lg bg-brand-bronze flex items-center justify-center font-display font-bold text-slate-950 text-sm">
-          M
-        </div>
-        <div class="text-slate-300 font-display font-semibold">Muthu • Vendor Relationship Specialist</div>
+        <div class="w-9 h-9 rounded-full border border-silver-400 flex items-center justify-center font-display font-bold text-white">M</div>
+        <span class="font-display font-semibold text-white">Muthu · Vendor Relationship Specialist</span>
       </div>
-      <div>
-        Strategic Procurement • Zero Brokerage Model • Direct Mill Provenance
-      </div>
-      <div>
-        © 2026 Muthu VSR. Designed for Enterprise Infrastructure.
-      </div>
+      <div class="text-silver-400">Strategic sourcing for IT &amp; MNC infrastructure</div>
+      <div class="text-silver-400">© 2026 Muthu. All rights reserved.</div>
     </div>
   </footer>
 
-  <!-- SIMPLE QUOTE MODAL -->
-  <div id="quoteModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="glass-panel-glow bg-slate-900 border border-brand-bronze/40 rounded-3xl max-w-lg w-full p-6 sm:p-8 relative">
-      <button onclick="closeQuoteModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white">
-        <i data-lucide="x" class="w-6 h-6"></i>
-      </button>
-      <div class="flex items-center gap-2 text-brand-bronze text-xs font-mono mb-2">
-        <i data-lucide="file-check" class="w-4 h-4"></i>
-        <span>TECHNICAL ALLOCATION SHEET</span>
-      </div>
-      <h3 class="text-xl font-display font-bold text-white mb-2">Download Grade Specifications</h3>
-      <p class="text-slate-400 text-xs leading-relaxed mb-6">
-        Get the direct engineering tolerances, carbon equivalent standards, and rolling cycle tables verified by Muthu for Tier-1 IT infrastructure projects.
-      </p>
-      <div class="space-y-4">
-        <input type="email" id="modalEmail" placeholder="Enter corporate email..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-bronze focus:outline-none">
-        <button onclick="submitModalSheet()" class="w-full gradient-bronze-btn text-slate-950 font-bold py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-          <i data-lucide="download" class="w-4 h-4"></i>
-          <span>Send Verification Dossier</span>
-        </button>
-        <div id="modalDoneMsg" class="hidden text-emerald-400 text-xs font-mono text-center">
-          Dossier link dispatched to your inbox!
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SCRIPT: THREE.JS INTERACTIVE 3D ENGINES & SITE LOGIC -->
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // ==========================================
-    // 1. HERO 3D ARCHITECTURAL STRUCTURE CANVAS
-    // ==========================================
-    const heroContainer = document.getElementById('hero3dContainer');
-    let heroScene, heroCamera, heroRenderer, heroTowerGroup, heroBeams = [];
-    let isWireframe = false;
-    let heroControls;
-
-    function initHero3D() {
-      if (!heroContainer) return;
-
-      heroScene = new THREE.Scene();
-      
-      const width = heroContainer.clientWidth;
-      const height = heroContainer.clientHeight;
-
-      heroCamera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-      heroCamera.position.set(16, 14, 22);
-
-      heroRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      heroRenderer.setSize(width, height);
-      heroRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      heroRenderer.shadowMap.enabled = true;
-      heroContainer.appendChild(heroRenderer.domElement);
-
-      if (THREE.OrbitControls) {
-        heroControls = new THREE.OrbitControls(heroCamera, heroRenderer.domElement);
-        heroControls.enableDamping = true;
-        heroControls.dampingFactor = 0.05;
-        heroControls.maxPolarAngle = Math.PI / 2 + 0.05;
-        heroControls.minDistance = 8;
-        heroControls.maxDistance = 45;
-        heroControls.autoRotate = true;
-        heroControls.autoRotateSpeed = 0.8;
-      }
-
-      // Lights
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-      heroScene.add(ambientLight);
-
-      const dirLight1 = new THREE.DirectionalLight(0xd49b4d, 1.8); // Warm Bronze
-      dirLight1.position.set(20, 30, 20);
-      heroScene.add(dirLight1);
-
-      const dirLight2 = new THREE.DirectionalLight(0x38bdf8, 1.0); // Slate Sky
-      dirLight2.position.set(-20, 15, -20);
-      heroScene.add(dirLight2);
-
-      // Ground Blueprint Grid
-      const gridHelper = new THREE.GridHelper(30, 30, 0xd49b4d, 0x1f2937);
-      gridHelper.position.y = -6;
-      heroScene.add(gridHelper);
-
-      // Build 3D Architectural High-Rise Skeleton (Steel Columns, Slabs, Nodes)
-      heroTowerGroup = new THREE.Group();
-
-      const floors = 7;
-      const floorHeight = 1.8;
-      const floorWidth = 7;
-      const floorDepth = 7;
-
-      const steelMaterial = new THREE.MeshStandardMaterial({
-        color: 0x94a3b8,
-        metalness: 0.85,
-        roughness: 0.25,
-      });
-
-      const bronzeMaterial = new THREE.MeshStandardMaterial({
-        color: 0xd49b4d,
-        metalness: 0.9,
-        roughness: 0.2,
-      });
-
-      const glassMaterial = new THREE.MeshPhysicalMaterial({
-        color: 0x38bdf8,
-        metalness: 0.1,
-        roughness: 0.1,
-        transmission: 0.7,
-        transparent: true,
-        opacity: 0.55,
-      });
-
-      // Construct Columns (4 Main Vertical Pillars)
-      const columnPositions = [
-        [-floorWidth/2, -floorDepth/2],
-        [floorWidth/2, -floorDepth/2],
-        [floorWidth/2, floorDepth/2],
-        [-floorWidth/2, floorDepth/2]
-      ];
-
-      columnPositions.forEach(([x, z]) => {
-        const colGeo = new THREE.CylinderGeometry(0.2, 0.2, floors * floorHeight, 16);
-        const col = new THREE.Mesh(colGeo, steelMaterial);
-        col.position.set(x, (floors * floorHeight) / 2 - 6, z);
-        heroTowerGroup.add(col);
-      });
-
-      // Construct Horizontal Slabs and Girders
-      for (let f = 0; f < floors; f++) {
-        const yPos = f * floorHeight - 5;
-        
-        // Floor Plate
-        const slabGeo = new THREE.BoxGeometry(floorWidth, 0.15, floorDepth);
-        const slab = new THREE.Mesh(slabGeo, bronzeMaterial);
-        slab.position.set(0, yPos, 0);
-        heroTowerGroup.add(slab);
-
-        // Core Glass Elevator Shaft
-        const coreGeo = new THREE.BoxGeometry(2.5, floorHeight * 0.95, 2.5);
-        const core = new THREE.Mesh(coreGeo, glassMaterial);
-        core.position.set(0, yPos + floorHeight/2, 0);
-        heroTowerGroup.add(core);
-
-        // Floating perimeter connector nodes
-        columnPositions.forEach(([x, z]) => {
-          const sphereGeo = new THREE.SphereGeometry(0.3, 16, 16);
-          const sphere = new THREE.Mesh(sphereGeo, bronzeMaterial);
-          sphere.position.set(x, yPos, z);
-          heroTowerGroup.add(sphere);
-        });
-
-        // Diagonal truss bracing on alternating levels
-        if (f % 2 === 0 && f < floors - 1) {
-          const trussGeo = new THREE.CylinderGeometry(0.08, 0.08, Math.sqrt(floorWidth*floorWidth + floorHeight*floorHeight), 8);
-          const truss1 = new THREE.Mesh(trussGeo, steelMaterial);
-          truss1.position.set(0, yPos + floorHeight / 2, floorDepth / 2);
-          truss1.rotation.z = Math.atan2(floorHeight, floorWidth);
-          heroTowerGroup.add(truss1);
-        }
-      }
-
-      // Add crane or antenna at top
-      const mastGeo = new THREE.CylinderGeometry(0.08, 0.15, 4, 8);
-      const mast = new THREE.Mesh(mastGeo, bronzeMaterial);
-      mast.position.set(0, (floors * floorHeight) - 4, 0);
-      heroTowerGroup.add(mast);
-
-      // Glowing Beacon Beacon at apex
-      const beaconGeo = new THREE.SphereGeometry(0.25, 16, 16);
-      const beaconMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
-      const beacon = new THREE.Mesh(beaconGeo, beaconMat);
-      beacon.position.set(0, (floors * floorHeight) - 2, 0);
-      heroTowerGroup.add(beacon);
-
-      heroScene.add(heroTowerGroup);
-
-      // Handle Resize
-      window.addEventListener('resize', onHeroResize);
-
-      // Toggle Wireframe Event
-      const toggleWireBtn = document.getElementById('toggleWireframeBtn');
-      if (toggleWireBtn) {
-        toggleWireBtn.addEventListener('click', () => {
-          isWireframe = !isWireframe;
-          heroTowerGroup.traverse(child => {
-            if (child.isMesh) {
-              child.material.wireframe = isWireframe;
-            }
-          });
-          toggleWireBtn.classList.toggle('bg-brand-bronze');
-          toggleWireBtn.classList.toggle('text-black');
-        });
-      }
-
-      // Reset View Button
-      const resetBtn = document.getElementById('resetViewBtn');
-      if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-          heroCamera.position.set(16, 14, 22);
-          if (heroControls) heroControls.target.set(0, 0, 0);
-        });
-      }
-
-      animateHero();
-    }
-
-    function onHeroResize() {
-      if (!heroContainer || !heroRenderer || !heroCamera) return;
-      const width = heroContainer.clientWidth;
-      const height = heroContainer.clientHeight;
-      heroCamera.aspect = width / height;
-      heroCamera.updateProjectionMatrix();
-      heroRenderer.setSize(width, height);
-    }
-
-    function animateHero() {
-      requestAnimationFrame(animateHero);
-      if (heroControls) heroControls.update();
-      if (heroRenderer && heroScene && heroCamera) {
-        heroRenderer.render(heroScene, heroCamera);
-      }
-    }
-
-    // ==========================================
-    // 2. MATERIAL SPECIFICATION 3D STUDIO
-    // ==========================================
-    const matContainer = document.getElementById('material3dContainer');
-    let matScene, matCamera, matRenderer, matMeshGroup, matControls;
-    let matAutoRotate = true;
-
-    // Technical Data Dictionary
-    const materialData = {
-      steel: {
-        code: "COMMODITY: TMT-FE550D-STRUCTURAL",
-        title: "Primary Fe 550D Rebars & Structural I-Beams",
-        desc: "Thermo-Mechanically Treated high-ductility rebar manufactured for ultra-tall IT campuses and earthquake-resistant foundations. Direct rolling allocation from primary blast-furnace mills.",
-        tensile: "550 N/mm² (Min 600 UTS)",
-        standard: "IS 1786:2008 / ASTM A615",
-        throughput: "25,000 MT / Month Capacity",
-        clients: "Tier-1 IT Parks & Data Centers",
-        geometryType: "steel"
-      },
-      brick: {
-        code: "COMMODITY: AAC-G3-AUTOCLAVED",
-        title: "AAC Precision Lightweight Blocks",
-        desc: "Autoclaved Aerated Concrete blocks engineered with razor-sharp dimensional accuracy. Reduces foundation dead load by 50% on multi-story corporate towers with superior thermal insulation.",
-        tensile: "Compressive Strength: 4.0 - 5.0 N/mm²",
-        standard: "IS 2185 (Part 3) / EN 771-4",
-        throughput: "450,000 m³ / Year Allotment",
-        clients: "MNC SEZs, High-Rise Towers",
-        geometryType: "brick"
-      },
-      concrete: {
-        code: "COMMODITY: RMC-M40-M80-HIGHGRADE",
-        title: "High-Performance Ready Mix Cement (RMC)",
-        desc: "Automated batching plant allocations for micro-silica enriched concrete with specialized retarders for uninterrupted continuous raft pours in IT basement complexes.",
-        tensile: "Design Slump: 150-180 mm | M60 Grade",
-        standard: "IS 456:2000 / IS 10262",
-        throughput: "60,000 m³ Continuous Dispatch",
-        clients: "Mission Critical Foundation Rafts",
-        geometryType: "concrete"
-      },
-      glass: {
-        code: "COMMODITY: DGU-LOW-E-SOLAR",
-        title: "Facade Double Glazed Units (DGU)",
-        desc: "Acoustic laminated and solar-reflective structural facade glass for tech campuses seeking USGBC/IGBC LEED Platinum ratings and acoustic silence along heavy urban corridors.",
-        tensile: "SHGC: 0.28 | U-Value: 1.4 W/m²K",
-        standard: "ASTM C1048 / IS 2553",
-        throughput: "120,000 Sq. Mtrs Per Tender",
-        clients: "Fintech Towers & Enterprise Campuses",
-        geometryType: "glass"
-      }
+    // Materials data
+    const mats = {
+      steel: { icon: 'construction', title: 'Structural Steel & TMT Rebars',
+        desc: 'High-strength TMT bars, structural sections and plates sourced from reputed mills, supplied with mill test certificates.',
+        list: ['TMT rebars (Fe 500 / 550D)', 'I-beams, channels & angles', 'Plates & sheets', 'Mill test certificates'] },
+      bricks: { icon: 'layers', title: 'Bricks, AAC & Concrete Blocks',
+        desc: 'Consistent-quality masonry units for walls and partitions, delivered in planned batches to your site.',
+        list: ['Red clay & fly-ash bricks', 'AAC lightweight blocks', 'Solid & hollow concrete blocks', 'Batch-wise quality checks'] },
+      cement: { icon: 'cylinder', title: 'Cement & Ready-Mix Concrete',
+        desc: 'Branded cement and RMC from dependable plants, coordinated with your pour schedule.',
+        list: ['OPC & PPC cement', 'RMC (M20 – M60)', 'Bulk & bagged supply', 'Timed plant dispatch'] },
+      finish: { icon: 'square-stack', title: 'Glass, Tiles & Finishing Materials',
+        desc: 'Facade glazing, flooring and finishing items sourced to meet design and compliance requirements.',
+        list: ['Double-glazed facade glass', 'Vitrified tiles & stone', 'Waterproofing & paints', 'Spec-matched samples'] }
     };
-
-    function initMaterial3D() {
-      if (!matContainer) return;
-
-      matScene = new THREE.Scene();
-      const width = matContainer.clientWidth;
-      const height = matContainer.clientHeight;
-
-      matCamera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-      matCamera.position.set(5, 4, 7);
-
-      matRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      matRenderer.setSize(width, height);
-      matRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      matContainer.appendChild(matRenderer.domElement);
-
-      if (THREE.OrbitControls) {
-        matControls = new THREE.OrbitControls(matCamera, matRenderer.domElement);
-        matControls.enableDamping = true;
-        matControls.dampingFactor = 0.05;
-        matControls.autoRotate = true;
-        matControls.autoRotateSpeed = 1.5;
-      }
-
-      // Lights
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
-      matScene.add(ambientLight);
-
-      const light1 = new THREE.DirectionalLight(0xd49b4d, 2.0);
-      light1.position.set(10, 15, 10);
-      matScene.add(light1);
-
-      const light2 = new THREE.DirectionalLight(0x38bdf8, 1.2);
-      light2.position.set(-10, 10, -10);
-      matScene.add(light2);
-
-      matMeshGroup = new THREE.Group();
-      matScene.add(matMeshGroup);
-
-      // Load Default Geometry
-      updateMaterialGeometry("steel");
-
-      window.addEventListener('resize', () => {
-        if (!matContainer || !matRenderer || !matCamera) return;
-        const w = matContainer.clientWidth;
-        const h = matContainer.clientHeight;
-        matCamera.aspect = w / h;
-        matCamera.updateProjectionMatrix();
-        matRenderer.setSize(w, h);
-      });
-
-      // Rotation Toggle
-      const rotBtn = document.getElementById('toggleMatAutoRotate');
-      const rotLabel = document.getElementById('rotateStateLabel');
-      if (rotBtn) {
-        rotBtn.addEventListener('click', () => {
-          matAutoRotate = !matAutoRotate;
-          if (matControls) matControls.autoRotate = matAutoRotate;
-          if (rotLabel) rotLabel.innerText = matAutoRotate ? "Pause Spin" : "Resume Spin";
-        });
-      }
-
-      // Reset View
-      const resetMatBtn = document.getElementById('resetMatView');
-      if (resetMatBtn) {
-        resetMatBtn.addEventListener('click', () => {
-          matCamera.position.set(5, 4, 7);
-          if (matControls) matControls.target.set(0, 0, 0);
-        });
-      }
-
-      animateMat();
+    function setMat(k) {
+      const m = mats[k];
+      document.getElementById('matTitle').textContent = m.title;
+      document.getElementById('matDesc').textContent = m.desc;
+      document.getElementById('matList').innerHTML = m.list.map(i =>
+        '<li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-crimson"></i>' + i + '</li>').join('');
+      document.getElementById('matIcon').outerHTML = '<i id="matIcon" data-lucide="' + m.icon + '" class="w-24 h-24 text-crimson"></i>';
+      lucide.createIcons();
     }
+    document.querySelectorAll('.mat-tab').forEach(t => t.addEventListener('click', () => {
+      document.querySelectorAll('.mat-tab').forEach(x => x.classList.remove('tab-active'));
+      t.classList.add('tab-active');
+      setMat(t.dataset.m);
+    }));
+    setMat('steel');
 
-    function updateMaterialGeometry(type) {
-      // Clear existing meshes
-      while (matMeshGroup.children.length > 0) {
-        matMeshGroup.remove(matMeshGroup.children[0]);
-      }
-
-      if (type === 'steel') {
-        // Create an interlocking cluster of Steel I-Beams and Ribbed Rebars
-        const steelMat = new THREE.MeshStandardMaterial({
-          color: 0x818cf8,
-          metalness: 0.95,
-          roughness: 0.2,
-        });
-
-        const bronzeAccent = new THREE.MeshStandardMaterial({
-          color: 0xd49b4d,
-          metalness: 0.9,
-          roughness: 0.25,
-        });
-
-        // Main Heavy I-Beam
-        const iBeam = createIBeam(1.4, 4.2, 0.18, steelMat);
-        iBeam.rotation.x = Math.PI / 4;
-        matMeshGroup.add(iBeam);
-
-        // Surrounding Rebars with ribbed rings
-        for (let i = -1.5; i <= 1.5; i += 1) {
-          const rebar = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 5, 24), bronzeAccent);
-          rebar.position.set(i * 1.1, 0, -1.2);
-          rebar.rotation.z = Math.PI / 6;
-          matMeshGroup.add(rebar);
-        }
-
-      } else if (type === 'brick') {
-        // Stack of Precision AAC Aerated Lightweight Masonry Blocks
-        const brickMat = new THREE.MeshStandardMaterial({
-          color: 0xd1d5db,
-          roughness: 0.9,
-          metalness: 0.05
-        });
-
-        const mortarMat = new THREE.MeshStandardMaterial({
-          color: 0xd49b4d,
-          roughness: 0.4,
-          metalness: 0.2
-        });
-
-        // 3D Pallet of blocks
-        for (let y = 0; y < 4; y++) {
-          for (let x = -1; x <= 1; x++) {
-            const block = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.7, 1.0), brickMat);
-            block.position.set(x * 1.48 + (y % 2 === 0 ? 0 : 0.2), y * 0.76 - 1.2, 0);
-            matMeshGroup.add(block);
-          }
-        }
-
-        // Structural binding band
-        const strap = new THREE.Mesh(new THREE.BoxGeometry(4.6, 0.08, 1.1), mortarMat);
-        strap.position.set(0, 0.4, 0);
-        matMeshGroup.add(strap);
-
-      } else if (type === 'concrete') {
-        // Industrial Ready Mix Drum / Core Concrete Column
-        const cementMat = new THREE.MeshStandardMaterial({
-          color: 0x9ca3af,
-          roughness: 0.6,
-          metalness: 0.2
-        });
-        const ringMat = new THREE.MeshStandardMaterial({
-          color: 0xd49b4d,
-          metalness: 0.85,
-          roughness: 0.2
-        });
-
-        const cylinder = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 1.6, 3.8, 32), cementMat);
-        matMeshGroup.add(cylinder);
-
-        // Reinforcement Bands
-        for (let r = -1.4; r <= 1.4; r += 0.9) {
-          const torus = new THREE.Mesh(new THREE.TorusGeometry(1.65, 0.08, 16, 40), ringMat);
-          torus.rotation.x = Math.PI / 2;
-          torus.position.y = r;
-          matMeshGroup.add(torus);
-        }
-
-      } else if (type === 'glass') {
-        // Double Glazed Insulated Curtain Wall Panel
-        const frameMat = new THREE.MeshStandardMaterial({
-          color: 0xd49b4d,
-          metalness: 0.9,
-          roughness: 0.15
-        });
-
-        const glassMat = new THREE.MeshPhysicalMaterial({
-          color: 0x38bdf8,
-          transmission: 0.85,
-          opacity: 0.6,
-          transparent: true,
-          roughness: 0.05,
-          ior: 1.5,
-          thickness: 0.5
-        });
-
-        // Frame
-        const frame = new THREE.Mesh(new THREE.BoxGeometry(3.6, 4.6, 0.25), frameMat);
-        matMeshGroup.add(frame);
-
-        // Dual Panes
-        const pane1 = new THREE.Mesh(new THREE.BoxGeometry(3.2, 4.2, 0.05), glassMat);
-        pane1.position.z = -0.15;
-        matMeshGroup.add(pane1);
-
-        const pane2 = new THREE.Mesh(new THREE.BoxGeometry(3.2, 4.2, 0.05), glassMat);
-        pane2.position.z = 0.15;
-        matMeshGroup.add(pane2);
-      }
+    // Estimator
+    const bi = document.getElementById('budgetInput'), ts = document.getElementById('typeSelect');
+    function calc() {
+      const b = +bi.value, p = +ts.value;
+      document.getElementById('budgetLabel').textContent = '₹ ' + b + ' Crores';
+      document.getElementById('savingsResult').textContent = '₹ ' + (b * p / 100).toFixed(2) + ' Cr';
     }
+    bi.addEventListener('input', calc); ts.addEventListener('change', calc); calc();
 
-    function createIBeam(flangeWidth, length, thickness, material) {
-      const group = new THREE.Group();
-      // Web
-      const web = new THREE.Mesh(new THREE.BoxGeometry(thickness, length, flangeWidth * 0.8), material);
-      group.add(web);
-      // Top Flange
-      const topFlange = new THREE.Mesh(new THREE.BoxGeometry(flangeWidth, length, thickness), material);
-      topFlange.position.z = (flangeWidth * 0.8) / 2;
-      group.add(topFlange);
-      // Bottom Flange
-      const btmFlange = new THREE.Mesh(new THREE.BoxGeometry(flangeWidth, length, thickness), material);
-      btmFlange.position.z = -(flangeWidth * 0.8) / 2;
-      group.add(btmFlange);
-
-      return group;
-    }
-
-    function animateMat() {
-      requestAnimationFrame(animateMat);
-      if (matControls) matControls.update();
-      if (matRenderer && matScene && matCamera) {
-        matRenderer.render(matScene, matCamera);
-      }
-    }
-
-    // Material Switcher Tab Event Listeners
-    const matTabs = document.querySelectorAll('.mat-tab');
-    matTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        matTabs.forEach(t => {
-          t.classList.remove('bg-brand-bronze', 'text-slate-950', 'shadow-lg');
-          t.classList.add('text-slate-300');
-        });
-        tab.classList.add('bg-brand-bronze', 'text-slate-950', 'shadow-lg');
-        tab.classList.remove('text-slate-300');
-
-        const key = tab.getAttribute('data-mat');
-        const data = materialData[key];
-        if (data) {
-          document.getElementById('matBadge').innerText = data.code;
-          document.getElementById('matTitle').innerText = data.title;
-          document.getElementById('matDesc').innerText = data.desc;
-          document.getElementById('specTensile').innerText = data.tensile;
-          document.getElementById('specStandard').innerText = data.standard;
-          document.getElementById('specThroughput').innerText = data.throughput;
-          document.getElementById('specClients').innerText = data.clients;
-
-          updateMaterialGeometry(key);
-        }
-      });
-    });
-
-    // ==========================================
-    // 3. ENTERPRISE ROI & SOURCING CALCULATOR
-    // ==========================================
-    const areaInput = document.getElementById('areaInput');
-    const budgetInput = document.getElementById('budgetInput');
-    const typeSelect = document.getElementById('typeSelect');
-
-    const areaLabel = document.getElementById('areaLabel');
-    const budgetLabel = document.getElementById('budgetLabel');
-    const savingsResult = document.getElementById('savingsResult');
-
-    function calculateSavings() {
-      if (!areaInput || !budgetInput || !typeSelect) return;
-
-      const area = parseInt(areaInput.value);
-      const budgetCrores = parseFloat(budgetInput.value);
-      const percentage = parseFloat(typeSelect.value);
-
-      areaLabel.innerText = Number(area).toLocaleString() + ' Sq. Ft';
-      budgetLabel.innerText = '₹ ' + budgetCrores.toFixed(0) + ' Crores';
-
-      const savings = (budgetCrores * (percentage / 100)).toFixed(2);
-      savingsResult.innerText = '₹ ' + savings + ' Crores';
-    }
-
-    if (areaInput && budgetInput && typeSelect) {
-      areaInput.addEventListener('input', calculateSavings);
-      budgetInput.addEventListener('input', calculateSavings);
-      typeSelect.addEventListener('change', calculateSavings);
-    }
-
-    // ==========================================
-    // 4. CONTACT SUBMIT & MODAL HANDLERS
-    // ==========================================
-    function handleContactSubmit(e) {
-      e.preventDefault();
-      const msg = document.getElementById('formSuccessMessage');
-      if (msg) {
-        msg.classList.remove('hidden');
-      }
-      if (typeof confetti === 'function') {
-        confetti({
-          particleCount: 70,
-          spread: 60,
-          origin: { y: 0.8 },
-          colors: ['#d49b4d', '#f3c784', '#38bdf8']
-        });
-      }
-      setTimeout(() => {
-        alert("Thank you. Inquiry routed directly to Muthu's enterprise desk. Direct response scheduled within 4 hours.");
-      }, 300);
-    }
-
-    function requestQuoteModal() {
-      const modal = document.getElementById('quoteModal');
-      if (modal) modal.classList.remove('hidden');
-    }
-
-    function closeQuoteModal() {
-      const modal = document.getElementById('quoteModal');
-      if (modal) modal.classList.add('hidden');
-    }
-
-    function submitModalSheet() {
-      const done = document.getElementById('modalDoneMsg');
-      if (done) done.classList.remove('hidden');
-      if (typeof confetti === 'function') {
-        confetti({
-          particleCount: 50,
-          spread: 50,
-          origin: { y: 0.6 },
-          colors: ['#d49b4d', '#38bdf8']
-        });
-      }
-      setTimeout(() => {
-        closeQuoteModal();
-        if (done) done.classList.add('hidden');
-      }, 1800);
-    }
-
-    // Launch 3D after DOM loads
-    window.addEventListener('DOMContentLoaded', () => {
-      initHero3D();
-      initMaterial3D();
-      calculateSavings();
-    });
+    // Scroll reveal
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } }), { threshold: .12 });
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
   </script>
 </body>
 </html>
